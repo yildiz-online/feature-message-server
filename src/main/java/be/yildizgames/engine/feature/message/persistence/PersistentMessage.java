@@ -26,7 +26,7 @@ package be.yildizgames.engine.feature.message.persistence;
 
 import be.yildiz.common.collections.Lists;
 import be.yildiz.common.id.PlayerId;
-import be.yildiz.module.database.data.PersistentData;
+import be.yildiz.module.database.data.SimplePersistentData;
 import be.yildizgames.engine.feature.message.Message;
 import be.yildizgames.engine.feature.message.generated.database.tables.Messages;
 import be.yildizgames.engine.feature.message.generated.database.tables.records.MessagesRecord;
@@ -44,7 +44,7 @@ import java.util.List;
 /**
  * @author Grégory Van den Borre
  */
-public class PersistentMessage implements PersistentData<Message, Message>, RecordMapper<MessagesRecord, Message> {
+public class PersistentMessage implements SimplePersistentData<Message>, RecordMapper<MessagesRecord, Message> {
 
     private final Logger logger = LoggerFactory.getLogger(PersistentMessage.class);
 
