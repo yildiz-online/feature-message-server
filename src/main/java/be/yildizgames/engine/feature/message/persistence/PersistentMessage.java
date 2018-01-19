@@ -24,9 +24,9 @@
 
 package be.yildizgames.engine.feature.message.persistence;
 
-import be.yildiz.common.collections.Lists;
-import be.yildiz.common.id.PlayerId;
 import be.yildiz.module.database.data.SimplePersistentData;
+import be.yildizgames.common.collection.Lists;
+import be.yildizgames.common.model.PlayerId;
 import be.yildizgames.engine.feature.message.Message;
 import be.yildizgames.engine.feature.message.generated.database.tables.Messages;
 import be.yildizgames.engine.feature.message.generated.database.tables.records.MessagesRecord;
