@@ -24,12 +24,11 @@
 
 package be.yildizgames.engine.feature.message.persistence;
 
-import be.yildiz.module.database.data.SimplePersistentData;
-import be.yildizgames.common.collection.Lists;
 import be.yildizgames.common.model.PlayerId;
 import be.yildizgames.engine.feature.message.Message;
 import be.yildizgames.engine.feature.message.generated.database.tables.Messages;
 import be.yildizgames.engine.feature.message.generated.database.tables.records.MessagesRecord;
+import be.yildizgames.module.database.data.SimplePersistentData;
 import org.jooq.DSLContext;
 import org.jooq.RecordMapper;
 import org.jooq.conf.Settings;
@@ -39,6 +38,7 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,7 +51,7 @@ public class PersistentMessage implements SimplePersistentData<Message>, RecordM
     public List<Message> getMessages(PlayerId player, Connection c) {
         try (DSLContext dsl = this.getDSL(c)) {
             Messages table = Messages.MESSAGES;
-            return Lists.newList(dsl.selectFrom(table)
+            return new ArrayList(dsl.selectFrom(table)
                     .where(table.RECEIVER_ID.equal((short)player.value)).fetch(this::map));
         }
     }
