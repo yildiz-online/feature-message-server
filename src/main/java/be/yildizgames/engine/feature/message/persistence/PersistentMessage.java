@@ -79,7 +79,7 @@ public class PersistentMessage implements SimplePersistentData<Message>, RecordM
 
     @Override
     public void update(Message data, Connection c) {
-        logger.error("Trying to update message, not allowed " + data);
+        logger.error("Trying to update message, not allowed {}", data);
     }
 
     private DSLContext getDSL(Connection c) {
