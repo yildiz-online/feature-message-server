@@ -34,7 +34,7 @@
   <url>https://bitbucket.org/yildiz-engine-team/feature-message-server</url>
 
   <artifactId>feature-message-server</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
 
   <packaging>jar</packaging>
   <inceptionYear>2017</inceptionYear>
@@ -46,7 +46,7 @@
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent-feature-server</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
 
   <properties>
@@ -62,7 +62,7 @@
     <dependency>
       <groupId>be.yildiz-games</groupId>
       <artifactId>module-database</artifactId>
-      <version>2.0.0</version>
+      <version>2.0.2-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
