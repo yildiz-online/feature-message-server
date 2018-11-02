@@ -25,7 +25,7 @@
 module be.yildizgames.feature.message.server {
 
     requires java.sql;
-    requires java.xml.ws.annotation;
+    requires java.annotation;
 
     requires be.yildizgames.common.model;
     requires be.yildizgames.feature.message.shared;
