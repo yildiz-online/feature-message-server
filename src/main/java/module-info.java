@@ -33,6 +33,7 @@ module be.yildizgames.feature.message.server {
 
     requires org.jooq;
     requires slf4j.api;
+    requires be.yildizgames.common.logging;
 
     exports be.yildizgames.engine.feature.message.persistence;
 }

@@ -24,6 +24,7 @@
 
 package be.yildizgames.engine.feature.message.persistence;
 
+import be.yildizgames.common.logging.LogFactory;
 import be.yildizgames.common.model.PlayerId;
 import be.yildizgames.engine.feature.message.Message;
 import be.yildizgames.engine.feature.message.generated.database.tables.Messages;
@@ -34,7 +35,6 @@ import org.jooq.RecordMapper;
 import org.jooq.conf.Settings;
 import org.jooq.impl.DSL;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.Timestamp;
@@ -46,7 +46,7 @@ import java.util.List;
  */
 public class PersistentMessage implements SimplePersistentData<Message>, RecordMapper<MessagesRecord, Message> {
 
-    private final Logger logger = LoggerFactory.getLogger(PersistentMessage.class);
+    private final Logger logger = LogFactory.getInstance().getLogger(PersistentMessage.class);
 
     public List<Message> getMessages(PlayerId player, Connection c) {
         try (DSLContext dsl = this.getDSL(c)) {
