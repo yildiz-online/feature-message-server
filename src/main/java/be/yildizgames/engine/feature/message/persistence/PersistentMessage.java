@@ -92,5 +92,4 @@ public class PersistentMessage implements SimplePersistentData<Message>, RecordM
     public Message map(MessagesRecord r) {
         return new Message(PlayerId.valueOf(r.getSenderId().intValue()), PlayerId.valueOf(r.getReceiverId().intValue()), r.getMessage(), r.getDate().getTime(), r.getRead());
     }
-
 }

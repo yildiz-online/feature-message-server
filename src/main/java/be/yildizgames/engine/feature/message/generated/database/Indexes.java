@@ -63,3 +63,4 @@ public class Indexes {
         public static Index PRIMARY_KEY_1 = createIndex("PRIMARY_KEY_1", Messages.MESSAGES, new OrderField[] { Messages.MESSAGES.MSG_ID }, true);
     }
 }
+

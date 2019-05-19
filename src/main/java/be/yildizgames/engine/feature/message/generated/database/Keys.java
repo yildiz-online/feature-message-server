@@ -80,3 +80,4 @@ public class Keys {
         public static final UniqueKey<MessagesRecord> PK_MESSAGES = createUniqueKey(Messages.MESSAGES, "PK_MESSAGES", Messages.MESSAGES.MSG_ID);
     }
 }
+

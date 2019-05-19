@@ -208,3 +208,4 @@ public class Messages extends TableImpl<MessagesRecord> {
         return new Messages(name, null);
     }
 }
+

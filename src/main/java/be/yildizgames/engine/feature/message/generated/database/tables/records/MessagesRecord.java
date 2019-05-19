@@ -407,3 +407,4 @@ public class MessagesRecord extends UpdatableRecordImpl<MessagesRecord> implemen
         set(5, date);
     }
 }
+

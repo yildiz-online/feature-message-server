@@ -92,3 +92,4 @@ public class Public extends SchemaImpl {
             Messages.MESSAGES);
     }
 }
+

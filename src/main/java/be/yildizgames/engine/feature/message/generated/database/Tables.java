@@ -51,3 +51,4 @@ public class Tables {
      */
     public static final Messages MESSAGES = be.yildizgames.engine.feature.message.generated.database.tables.Messages.MESSAGES;
 }
+
