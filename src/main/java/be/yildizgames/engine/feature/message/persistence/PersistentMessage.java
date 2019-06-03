@@ -33,8 +33,6 @@ import org.jooq.DSLContext;
 import org.jooq.RecordMapper;
 import org.jooq.conf.Settings;
 import org.jooq.impl.DSL;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.Timestamp;
@@ -46,7 +44,7 @@ import java.util.List;
  */
 public class PersistentMessage implements SimplePersistentData<Message>, RecordMapper<MessagesRecord, Message> {
 
-    private final Logger logger = LoggerFactory.getLogger(PersistentMessage.class);
+    private final System.Logger logger = System.getLogger(PersistentMessage.class.getName());
 
     public List<Message> getMessages(PlayerId player, Connection c) {
         try (DSLContext dsl = this.getDSL(c)) {
@@ -79,7 +77,7 @@ public class PersistentMessage implements SimplePersistentData<Message>, RecordM
 
     @Override
     public void update(Message data, Connection c) {
-        logger.error("Trying to update message, not allowed {}", data);
+        logger.log(System.Logger.Level.ERROR, "Trying to update message, not allowed {}", data);
     }
 
     private DSLContext getDSL(Connection c) {
