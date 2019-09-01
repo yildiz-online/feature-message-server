@@ -51,6 +51,7 @@
 
   <properties>
     <feature.package>message</feature.package>
+    <java.version>11</java.version>
   </properties>
 
   <dependencies>
