@@ -32,7 +32,6 @@ module be.yildizgames.feature.message.server {
     requires be.yildizgames.module.database;
 
     requires org.jooq;
-    requires be.yildizgames.common.logging;
 
     exports be.yildizgames.engine.feature.message.persistence;
 }
